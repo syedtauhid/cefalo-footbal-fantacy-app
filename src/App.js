@@ -1,6 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import Footer from './Footer'
+import AddTodo from './AddTodo'
+import VisibleTodoList from './VisibleTodoList'
+
 export default function BasicExample() {
   return (
     <Router>
@@ -15,6 +19,9 @@ export default function BasicExample() {
           <li>
             <Link to="/topics">Topics</Link>
           </li>
+          <li>
+            <Link to="/redux">Redux Example</Link>
+          </li>
         </ul>
 
         <hr />
@@ -22,6 +29,7 @@ export default function BasicExample() {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/topics" component={Topics} />
+        <Route path="/redux" component={TodoList} />
       </div>
     </Router>
   );
@@ -75,4 +83,14 @@ function Topic({ match }) {
       <h3>{match.params.topicId}</h3>
     </div>
   );
+}
+
+function TodoList() {
+  return (
+    <div>
+      <AddTodo />
+      <VisibleTodoList />
+      <Footer />
+    </div>
+  )
 }
