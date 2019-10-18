@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Premier League Players</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="page">
+        <nav class="top-nav" role="menubar">
+            <ul class="menu">
+                <li>
+                    <a href="#" class="menu-item active">Players</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="mainContent">
+            <div class="page-content">
+                <header class="page-hero">
+                    <div class="wrapper col-12">
+                        <h1 class="page-title">Players</h1>
+                        <div class="search-container">
+                            <div class="search-input-container" role="search">
+                                <label for="searchInput" class="visuallyHidden">Search for a Player</label>
+                                <input id="searchInput" type="text" value="" placeholder="Search for a Player" class="search-text-container search-input">
+                                <div class="search-icon-container search-commit" role="button">
+                                    <div class="icn search-sm"><span class="visuallyHidden">Submit search</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="wrapper">
+                    <section class="page-filter">
+                        <div class="drop-down">
+                            <div class="label">Filter by Season</div>
+                            <div class="current">2019/20</div>
+                            <ul class="dropdown-list">
+                                <li>2019/20</li>
+                                <li>2018/19</li>
+                                <li>2017/18</li>
+                            </ul>
+                        </div>
+                        <div class="drop-down">
+                            <div class="label">Filter by Club</div>
+                            <div class="current">All Clubs</div>
+                            <ul class="dropdown-list">
+                                <li>All Clubs</li>
+                                <li>Arsenal</li>
+                                <li>Aston Villa</li>
+                            </ul>
+                        </div>
+                        <div class="filter-button filter-button--reset" role="button">
+                            <i class="filter-button__icon icn reset-b"></i>
+                            <i class="filter-button__icon filter-button__icon--hover icn reset-p"></i>
+                            <span class="filter-button__text">Reset Filters</span>
+                        </div>
+                    </section>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Player</th>
+                                    <th class="hide-s">Position</th>
+                                    <th class="hide-s">Nationality</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a class="player-name" href="#"><img class="img" src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/40x40/Photo-Missing.png" alt="Photo for Player 1">Player 1</a>
+                                    </td>
+                                    <td class="hide-s">Forward</td>
+                                    <td class="hide-s">
+                                        <span class="flag TR"></span>
+                                        <span class="player-country">Turkey</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="player-name" href="#"><img class="img" src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/40x40/p155513.png" alt="Photo for Rolando Aarons">Rolando Aarons</a>
+                                    </td>
+                                    <td class="hide-s">Midfielder</td>
+                                    <td class="hide-s">
+                                        <span class="flag GB-ENG"></span>
+                                        <span class="player-country">England</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="loader" style="min-height:10px;">Loading More Content...<div class="loader-small"><div class="line"></div></div></div>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <div class="wrapper col-12">
+                <div class="official"><a href="//www.premierleague.com" class="icn pl-logo-corporate"></a></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
