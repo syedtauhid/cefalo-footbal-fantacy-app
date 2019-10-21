@@ -1,13 +1,1180 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+* {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  font-size: 62.5%;
+  max-width: 100%;
+}
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  font-family: PremierSans-Regular,Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+  color: #242424;
+  -webkit-text-size-adjust: 100%;
+  font-size: 1.4rem;
+  min-width: 20em;
+  min-height: 50vh;
+}
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+td, th {
+  padding: 0;
+}
+img {
+  border: 0;
+  opacity: 1;
+  transition: opacity .35s ease-in-out,transform .2s;
+}
+a {
+  background-color: transparent;
+}
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+@media (max-width: 43.75em) {
+  .hide-s {
+      display: none;
+  }
+}
+.loader {
+  text-align: center;
+  margin: 2rem 0;
+  clear: both;
+}
+.loader-small {
+  position: relative;
+  clear: both;
+  display: table;
+  margin: 0 auto;
+  height: 1rem;
+}
+.loader .loader-small {
+  margin-top: 1rem;
+}
+.loader-small .line {
+  animation: d .4s infinite alternate,c 1.6s infinite forwards;
+  height: 2px;
+}
+@keyframes c {
+  0% {
+      background: #37003c
+  }
+
+  33% {
+      background: #963cff
+  }
+
+  66% {
+      background: #ff2882
+  }
+
+  to {
+      background: #ff6900
+  }
+}
+@keyframes d {
+  0% {
+      width: 0
+  }
+
+  to {
+      width: 10rem
+  }
+}
+.icn {
+  background: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/global-sprite.png) no-repeat;
+  display: block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icn {
+      background-size: 788px 724px;
+      background-image: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/global-sprite@x2.png);
+  }
+}
+.icn.search-sm {
+  width: 20px;
+  height: 20px;
+  background-position: -672px -507px;
+}
+.icn.reset-b {
+  width: 22px;
+  height: 18px;
+  background-position: -640px -420px;
+}
+.icn.reset-p {
+  width: 22px;
+  height: 18px;
+  background-position: -733px -665px;
+}
+.icn.pl-logo-corporate {
+  background: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/pl-logo-sprite.png) no-repeat;
+  width: 119px;
+  height: 22px;
+  background-position: -376px -155px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icn.pl-logo-corporate {
+      background-image: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/pl-logo-sprite@x2.png);
+      background-size: 517px 308px;
+  }
+}
+.flag {
+  background-image: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/flags-sprite.png);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .flag {
+      background-image: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/flags-sprite@x2.png);
+      background-size: 270px 260px;
+  }
+}
+.flag.AG {
+  background-position: -30px 0
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.flag.AL {
+  background-position: -180px -40px
+}
+
+.flag.AM {
+  background-position: 0 -20px
+}
+
+.flag.AO {
+  background-position: -30px -20px
+}
+
+.flag.AQ {
+  background-position: 0 -40px
+}
+
+.flag.AR {
+  background-position: -30px -40px
+}
+
+.flag.AT {
+  background-position: -60px 0
+}
+
+.flag.AU {
+  background-position: -60px -20px
+}
+
+.flag.BA {
+  background-position: -60px -40px
+}
+
+.flag.BB {
+  background-position: 0 -60px
+}
+
+.flag.BE {
+  background-position: -30px -60px
+}
+
+.flag.BF {
+  background-position: -60px -60px
+}
+
+.flag.BG {
+  background-position: -90px 0
+}
+
+.flag.BI {
+  background-position: -90px -20px
+}
+
+.flag.BJ {
+  background-position: -90px -40px
+}
+
+.flag.BM {
+  background-position: -90px -60px
+}
+
+.flag.BO {
+  background-position: 0 -80px
+}
+
+.flag.BR {
+  background-position: -30px -80px
+}
+
+.flag.BS {
+  background-position: -60px -80px
+}
+
+.flag.BY {
+  background-position: -90px -80px
+}
+
+.flag.CA {
+  background-position: 0 -100px
+}
+
+.flag.CD {
+  background-position: -30px -100px
+}
+
+.flag.CG {
+  background-position: -60px -100px
+}
+
+.flag.CH {
+  background-position: -90px -100px
+}
+
+.flag.CI {
+  background-position: -120px 0
+}
+
+.flag.CL {
+  background-position: -120px -20px
+}
+
+.flag.CM {
+  background-position: -120px -40px
+}
+
+.flag.CN {
+  background-position: -120px -60px
+}
+
+.flag.CO {
+  background-position: -120px -80px
+}
+
+.flag.CR {
+  background-position: -120px -100px
+}
+
+.flag.CV {
+  background-position: 0 -120px
+}
+
+.flag.CW {
+  background-position: -30px -120px
+}
+
+.flag.CY {
+  background-position: -60px -120px
+}
+
+.flag.CZ {
+  background-position: -90px -120px
+}
+
+.flag.DE {
+  background-position: -120px -120px
+}
+
+.flag.DK {
+  background-position: -150px -20px
+}
+
+.flag.DZ {
+  background-position: -150px -40px
+}
+
+.flag.EC {
+  background-position: -150px -60px
+}
+
+.flag.EE {
+  background-position: -150px -80px
+}
+
+.flag.EG {
+  background-position: -150px -100px
+}
+
+.flag.ES {
+  background-position: -150px -120px
+}
+
+.flag.FI {
+  background-position: 0 -140px
+}
+
+.flag.FO {
+  background-position: -30px -140px
+}
+
+.flag.FR {
+  background-position: -60px -140px
+}
+
+.flag.GA {
+  background-position: -90px -140px
+}
+
+.flag.GB-ENG {
+  background-position: -120px -140px
+}
+
+.flag.GB-NIR {
+  background-position: -150px -140px
+}
+
+.flag.GB-SCT {
+  background-position: 0 -160px
+}
+
+.flag.GB-WLS {
+  background-position: -30px -160px
+}
+
+.flag.GD {
+  background-position: -60px -160px
+}
+
+.flag.GE {
+  background-position: -90px -160px
+}
+
+.flag.GH {
+  background-position: -120px -160px
+}
+
+.flag.GI {
+  background-position: -150px -160px
+}
+
+.flag.GM {
+  background-position: -180px 0
+}
+
+.flag.GN {
+  background-position: -180px -20px
+}
+
+.flag.GR {
+  background-position: 0 0
+}
+
+.flag.GY {
+  background-position: -180px -60px
+}
+
+.flag.HN {
+  background-position: -180px -80px
+}
+
+.flag.HR {
+  background-position: -180px -100px
+}
+
+.flag.HU {
+  background-position: -180px -120px
+}
+
+.flag.IE {
+  background-position: -180px -140px
+}
+
+.flag.IL {
+  background-position: -180px -160px
+}
+
+.flag.IR {
+  background-position: 0 -180px
+}
+
+.flag.IS {
+  background-position: -30px -180px
+}
+
+.flag.IT {
+  background-position: -60px -180px
+}
+
+.flag.JM {
+  background-position: -90px -180px
+}
+
+.flag.JP {
+  background-position: -120px -180px
+}
+
+.flag.KE {
+  background-position: -150px -180px
+}
+
+.flag.KN {
+  background-position: -180px -180px
+}
+
+.flag.KR {
+  background-position: -210px 0
+}
+
+.flag.LR {
+  background-position: -210px -20px
+}
+
+.flag.LT {
+  background-position: -210px -40px
+}
+
+.flag.LV {
+  background-position: -210px -60px
+}
+
+.flag.MA {
+  background-position: -210px -80px
+}
+
+.flag.ME {
+  background-position: -210px -100px
+}
+
+.flag.MK {
+  background-position: -210px -120px
+}
+
+.flag.ML {
+  background-position: -210px -140px
+}
+
+.flag.MS {
+  background-position: -210px -160px
+}
+
+.flag.MX {
+  background-position: -210px -180px
+}
+
+.flag.NG {
+  background-position: 0 -200px
+}
+
+.flag.NL {
+  background-position: -30px -200px
+}
+
+.flag.NO {
+  background-position: -60px -200px
+}
+
+.flag.NZ {
+  background-position: -90px -200px
+}
+
+.flag.OM {
+  background-position: -120px -200px
+}
+
+.flag.PE {
+  background-position: -150px -200px
+}
+
+.flag.PH {
+  background-position: -180px -200px
+}
+
+.flag.PK {
+  background-position: -210px -200px
+}
+
+.flag.PL {
+  background-position: 0 -220px
+}
+
+.flag.PS {
+  background-position: -30px -220px
+}
+
+.flag.PT {
+  background-position: -60px -220px
+}
+
+.flag.PY {
+  background-position: -90px -220px
+}
+
+.flag.RO {
+  background-position: -120px -220px
+}
+
+.flag.RS {
+  background-position: -150px -220px
+}
+
+.flag.RU {
+  background-position: -180px -220px
+}
+
+.flag.SC {
+  background-position: -210px -220px
+}
+
+.flag.SE {
+  background-position: -240px 0
+}
+
+.flag.SI {
+  background-position: -240px -20px
+}
+
+.flag.SK {
+  background-position: -240px -40px
+}
+
+.flag.SL {
+  background-position: -240px -60px
+}
+
+.flag.SN {
+  background-position: -240px -80px
+}
+
+.flag.ST {
+  background-position: -240px -100px
+}
+
+.flag.TG {
+  background-position: -240px -120px
+}
+
+.flag.TH {
+  background-position: -240px -140px
+}
+
+.flag.TN {
+  background-position: -240px -160px
+}
+
+.flag.TR {
+  background-position: -240px -180px
+}
+
+.flag.TT {
+  background-position: -240px -200px
+}
+
+.flag.UA {
+  background-position: -240px -220px
+}
+
+.flag.US {
+  background-position: 0 -240px
+}
+
+.flag.UY {
+  background-position: -30px -240px
+}
+
+.flag.VE {
+  background-position: -60px -240px
+}
+
+.flag.ZA {
+  background-position: -90px -240px
+}
+
+.flag.ZM {
+  background-position: -120px -240px
+}
+
+.flag,.flag.default {
+  background-position: -150px 0
+}
+
+.search-input-container {
+  position: relative;
+  margin-bottom: 2rem;
+  margin-right: 3.5rem;
+}
+.search-input-container .search-input {
+  display: block;
+  height: 5rem;
+  border: 0;
+  padding: 0 2.5rem 0 1rem;
+  width: 100%;
+  z-index: 1;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-bottom: 1px solid #e8e8e8;
+  transition: .2s;
+}
+.search-input-container .search-commit {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.75rem;
+  right: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #fff;
+  border-radius: 100%;
+  transition: all .2s;
+  cursor: pointer;
+}
+.search-input-container .search-commit .icn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.drop-down {
+  position: relative;
+  cursor: pointer;
+  width: 20rem;
+  padding: 0;
+}
+.drop-down:before {
+  background: #e8e8e8;
+  bottom: 1rem;
+  content: "";
+  display: block;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  width: 1px;
+}
+.drop-down .label {
+  position: absolute;
+  left: 1.8rem;
+  top: 1.8rem;
+  pointer-events: none;
+  margin-bottom: .3rem;
+  font-size: 1.1rem;
+  color: #963cff;
+  font-family: PremierSans-Bold-Italic,Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.drop-down .current {
+  transition: all .2s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+  color: #2f2f2f;
+  font-size: 1.7rem;
+  padding: 3.5rem 4rem 1.8rem 1.8rem;
+}
+.drop-down .current:after {
+  display: block;
+  content: "";
+  background: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/global-sprite.png) -780px -384px no-repeat;
+  width: 8px;
+  height: 10px;
+  position: absolute;
+  right: 1.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .drop-down .current:after {
+      background-image: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/sprites/global-sprite@x2.png);
+      background-size: 788px 724px;
+  }
+}
+.drop-down .dropdown-list {
+  visibility: hidden;
+  transform: scale(0);
+  transform-origin: top center;
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  z-index: 70;
+  background: #fff;
+  min-width: 100%;
+  transition: .1s;
+  box-shadow: 0 1px 12px 0 rgba(0,0,0,.15);
+  border-radius: 0 0 2px 2px;
+  max-height: 40rem;
+  overflow-y: auto;
+  padding: 1rem 0;
+  margin: 0;
+  list-style: none;
+}
+.drop-down .dropdown-list:before {
+  background: linear-gradient(270deg,#ff2882,#963cff);
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.drop-down.open .dropdown-list {
+  visibility: visible;
+  transform: scale(1);
+}
+.drop-down .dropdown-list li {
+  color: #333;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all .2s;
+}
+.drop-down .dropdown-list li.highlight, 
+.drop-down .dropdown-list li:focus, 
+.drop-down .dropdown-list li:hover {
+  background-color: transparent;
+  font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+}
+
+.filter-button {
+  font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+  color: #76766f;
+  cursor: pointer;
+  font-size: 1.1rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 1.1rem 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.filter-button:hover {
+  color: #ff2882;
+}
+.filter-button__icon {
+  display: inline-block;
+  margin-bottom: -.5rem;
+  margin-right: 1rem;
+}
+.filter-button__icon--hover {
+  display: none;
+}
+.filter-button:hover .filter-button__icon {
+  display: none;
+}
+.filter-button:hover .filter-button__icon--hover {
+  display: inline-block;
+}
+
+.table {
+  clear: both;
+}
+.table table {
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  border-collapse: inherit;
+}
+.table thead {
+  background-color: #fbfbfb;
+}
+.table td, .table th {
+  padding: 1.2rem 1rem;
+}
+.table th {
+  color: #666;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.table thead th {
+  color: #6c6c6c;
+}
+.table .flag {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
+.table a {
+  color: #242424;
+  vertical-align: middle;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1376px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both
+}
+
+.wrapper.col-12 {
+  float: none
+}
+
+.wrapper .col-12,.wrapper.col-12 .col-12,.wrapper.col-12 .wrapper.col-12,.wrapper .wrapper.col-12 {
+  padding: 0
+}
+
+@media (max-width: 43.75em) {
+  .wrapper {
+      padding-left:0;
+      padding-right: 0
+  }
+
+  .wrapper.col-12 {
+      padding-left: 1rem;
+      padding-right: 1rem
+  }
+}
+
+[class*=col-] {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 3.78788%;
+  padding-right: 3.78788%;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+[class*=col-].centered {
+  float: none;
+  margin: 0 auto
+}
+
+[class^=col-1] {
+  width: 8.33333%
+}
+
+[class^=col-2] {
+  width: 16.66667%
+}
+
+[class^=col-3] {
+  width: 25%
+}
+
+[class^=col-4] {
+  width: 33.33333%
+}
+
+[class^=col-5] {
+  width: 41.66667%
+}
+
+[class^=col-6] {
+  width: 50%
+}
+
+[class^=col-7] {
+  width: 58.33333%
+}
+
+[class^=col-8] {
+  width: 66.66667%
+}
+
+[class^=col-9] {
+  width: 75%
+}
+
+[class^=col-10] {
+  width: 83.33333%
+}
+
+[class^=col-11] {
+  width: 91.66667%
+}
+
+[class^=col-12] {
+  width: 100%
+}
+
+@media (max-width: 63.9375em) {
+  [class*=col-] {
+      width:100%
+  }
+}
+
+@media (max-width: 63.9375em) and (min-width:43.75em) {
+  .col-1-m {
+      width:8.33333%
+  }
+
+  .col-2-m {
+      width: 16.66667%
+  }
+
+  .col-3-m {
+      width: 25%
+  }
+
+  .col-4-m {
+      width: 33.33333%
+  }
+
+  .col-5-m {
+      width: 41.66667%
+  }
+
+  .col-6-m {
+      width: 50%
+  }
+
+  .col-7-m {
+      width: 58.33333%
+  }
+
+  .col-8-m {
+      width: 66.66667%
+  }
+
+  .col-9-m {
+      width: 75%
+  }
+
+  .col-10-m {
+      width: 83.33333%
+  }
+
+  .col-11-m {
+      width: 91.66667%
+  }
+
+  .col-12-m {
+      width: 100%
+  }
+}
+
+@media (max-width: 43.75em) and (min-width:20em) {
+  .col-1-s {
+      width:8.33333%
+  }
+
+  .col-2-s {
+      width: 16.66667%
+  }
+
+  .col-3-s {
+      width: 25%
+  }
+
+  .col-4-s {
+      width: 33.33333%
+  }
+
+  .col-5-s {
+      width: 41.66667%
+  }
+
+  .col-6-s {
+      width: 50%
+  }
+
+  .col-7-s {
+      width: 58.33333%
+  }
+
+  .col-8-s {
+      width: 66.66667%
+  }
+
+  .col-9-s {
+      width: 75%
+  }
+
+  .col-10-s {
+      width: 83.33333%
+  }
+
+  .col-11-s {
+      width: 91.66667%
+  }
+
+  .col-12-s {
+      width: 100%
+  }
+}
+
+.top-nav {
+  line-height: 4.2rem;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.15);
+  position: relative;
+  background: #fff;
+  z-index: 1;
+  margin-left: 0;
+  margin-right: 0;
+}
+.top-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.top-nav li {
+  float: left;
+}
+.top-nav a {
+  display: block;
+  color: #76766f;
+  text-decoration: none;
+  padding: .4rem 2rem;
+  font-size: 1.3rem;
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+.top-nav a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(90deg,#963cff,#a64dae);
+  transition: .2s;
+  z-index: -1;
+}
+.top-nav a:focus:before, .top-nav a:hover:before {
+  height: 4px;
+}
+.top-nav a.active {
+  font-weight: 400;
+}
+.top-nav a.active:before {
+  height: 4px;
+  background: linear-gradient(90deg,#963cff,#a64dae);
+}
+#mainContent {
+  clear: both;
+}
+.page-hero {
+  background-color: #37003c;
+  margin-top: -2rem;
+  background-image: url(https://www.premierleague.com/resources/prod/e7a3d0d-1684/i/bg-elements/heading-bg-desktop.svg);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin-bottom: 4rem;
+  padding: 7rem 0 5.2rem;
+  position: relative;
+}
+.page-hero .page-title {
+  color: #fff;
+  float: left;
+  max-width: 70%;
+}
+.page-title {
+  font-size: 7.3rem;
+}
+.page-hero .search-input-container .search-input {
+  min-width: 50rem;
+  color: #fff;
+  border-radius: 32px;
+  box-shadow: 0 1px 12px 0 rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.5);
+  border-bottom: 0;
+  font-size: 1.5rem;
+  padding: 0 6.5rem 0 2rem;
+}
+.page-hero .search-container {
+  float: left;
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+@media (max-width: 56.25em) {
+  .page-hero .search-container {
+      clear: both;
+      margin-left: 0;
+      padding-top: 0;
+  }
+}
+
+.page-filter {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 0;
+  border: 1px solid #e8e8e8;
+  border-radius: .3rem;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.page-filter:before {
+  content: "";
+  display: block;
+}
+.page-filter:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page-filter .drop-down {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 22rem;
+  -ms-flex: 1;
+  flex: 1;
+}
+.page-filter .filter-button--reset {
+  margin-left: auto;
+}
+
+.player-name .img {
+  width: 4rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.5rem;
+}
+.main-footer .wrapper{
+  padding: 0;
+}
+.official {
+  text-align: center;
+  float: none;
+}
+.official a {
+  transition: .2s;
+}
+.main-footer a {
+  color: #242424;
+  text-decoration: none;
+}
+.main-footer .icn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+  margin-top: -.1rem;
 }

@@ -1,46 +1,38 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import Players from './Players'
 import Footer from './Footer'
 import AddTodo from './AddTodo'
 import VisibleTodoList from './VisibleTodoList'
 
-export default function BasicExample() {
+export default function App() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-          <li>
-            <Link to="/redux">Redux Example</Link>
-          </li>
-        </ul>
-
-        <hr />
-
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
-        <Route path="/redux" component={TodoList} />
-      </div>
+      <nav class="top-nav" role="menubar">
+          <ul class="menu">
+              <li>
+                  <Link to="/" className="menu-item" activeClassName="active">Players</Link>
+              </li>
+              <li>
+                <Link to="/about" className="menu-item" activeClassName="active">About</Link>
+              </li>
+              <li>
+                <Link to="/topics" className="menu-item" activeClassName="active">Topics</Link>
+              </li>
+              <li>
+                <Link to="/redux" className="menu-item" activeClassName="active">Redux Example</Link>
+              </li>
+          </ul>
+      </nav>
+      <main id="mainContent">
+          <Route exact path="/" component={Players} />
+          <Route path="/about" component={About} />
+          <Route path="/topics" component={Topics} />
+          <Route path="/redux" component={TodoList} />
+      </main>
     </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
+  )
 }
 
 function About() {
