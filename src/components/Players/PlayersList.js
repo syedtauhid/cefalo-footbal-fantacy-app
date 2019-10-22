@@ -5,6 +5,7 @@ import Loader from '../Loader'
 
 const PlayersList = ({search}) => {
     const [players, setPlayers] = useState([]);
+    const [filters, setFilters] = useState({});
     const fetchPlayersData = () => {
         const data = [
             {player: 'Player 1', image: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/40x40/Photo-Missing.png', position: 'Forward', flag: 'TR', nationality: 'Turkey'},
@@ -21,10 +22,15 @@ const PlayersList = ({search}) => {
     useEffect(() => {
         fetchPlayersData();
     }, [search]);
+
+    const onChangeFilter = (f) => {
+        setFilters(f);
+        fetchPlayersData();
+    }
     return (
         <>
         <div className="wrapper">
-            <PlayersFilter/>
+            <PlayersFilter onChangeFilter={onChangeFilter} />
             <div className="table">
                 <table>
                     <thead>

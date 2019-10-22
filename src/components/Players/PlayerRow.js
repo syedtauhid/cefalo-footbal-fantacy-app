@@ -6,7 +6,7 @@ const PlayerRow = ({data}) => {
         <tr>
             <td>
                 <a className="player-name" href="#">
-                    <img className="img" src={image} alt={`Photo for ${player}`} />{player}
+                    <img className="img" src={image} alt={player} />{player}
                 </a>
             </td>
             <td className="hide-s">{position}</td>
