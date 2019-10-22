@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import DropdownFilter from '../DropdownFilter'
 
 const PlayersFilter = ({onChangeFilter}) => {
-    const seasons = ['2019/20', '2018/19', '2017/18'];
-    const clubs = ['All Clubs', 'Arsenal', 'Aston Villa'];
+    const seasons = ['2019/20', '2018/19', '2017/18']; // https://footballapi.pulselive.com/football/competitions/1/compseasons?page=0&pageSize=100
+    const clubs = ['All Clubs', 'Arsenal', 'Aston Villa']; // https://footballapi.pulselive.com/football/teams?page=0&pageSize=100&altIds=true&compSeasons={Season_Id}
     const [season, setSeason] = useState(seasons[0]);
     const [club, setClub] = useState(clubs[0]);
     
@@ -18,7 +18,7 @@ const PlayersFilter = ({onChangeFilter}) => {
     }
     const onClubChange = (value) => {
         setClub(value);
-        onChangeFilter({season, club: value});
+        onChangeFilter({season, club: value}); 
     }
     return (
         <section className="page-filter">
