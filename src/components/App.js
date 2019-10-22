@@ -15,13 +15,13 @@ export default function App() {
                   <Link to="/" className="menu-item" activeClassName="active">Players</Link>
               </li>
               <li>
-                <Link to="/about" className="menu-item" activeClassName="active">About</Link>
+                <Link to="/about" exact={true} className="menu-item" activeClassName="active">About</Link>
               </li>
               <li>
-                <Link to="/topics" className="menu-item" activeClassName="active">Topics</Link>
+                <Link to="/topics" exact={true} className="menu-item" activeClassName="active">Topics</Link>
               </li>
               <li>
-                <Link to="/redux" className="menu-item" activeClassName="active">Redux Example</Link>
+                <Link to="/redux" exact={true} className="menu-item" activeClassName="active">Redux Example</Link>
               </li>
           </ul>
       </nav>

@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PlayersFilter from './PlayersFilter'
 import PlayerRow from './PlayerRow'
 import Loader from '../Loader'
 
-const PlayersList = () => {
-    const data = [
-        {player: 'Player 1', image: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/40x40/Photo-Missing.png', position: 'Forward', flag: 'TR', nationality: 'Turkey'},
-        {player: 'Rolando Aarons', image: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/40x40/p155513.png', position: 'Midfielder', flag: 'GB-ENG', nationality: 'England'}
-    ]
+const PlayersList = ({search}) => {
+    const [players, setPlayers] = useState([]);
+    const fetchPlayersData = () => {
+        const data = [
+            {player: 'Player 1', image: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/40x40/Photo-Missing.png', position: 'Forward', flag: 'TR', nationality: 'Turkey'},
+            {player: 'Rolando Aarons', image: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/40x40/p155513.png', position: 'Midfielder', flag: 'GB-ENG', nationality: 'England'}
+        ];
+
+        if(search) {
+            setPlayers(data.filter((item) => item.player.toLowerCase().indexOf(search.toLowerCase()) > -1));
+        } else {
+            setPlayers(data);
+        }
+    };
+    
+    useEffect(() => {
+        fetchPlayersData();
+    }, [search]);
     return (
         <>
         <div className="wrapper">
@@ -22,7 +35,7 @@ const PlayersList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        { data.map((d, i) => <PlayerRow key={i} data={d} />) }
+                        { players.map((d, i) => <PlayerRow key={i} data={d} />) }
                     </tbody>
                 </table>
             </div>
