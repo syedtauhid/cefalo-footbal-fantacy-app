@@ -7,7 +7,7 @@ const Players = () => {
     const [searchKey, setSearchKey] = useState('');
     const onSearchPlayers = (key) => {
         setSearchKey(encodeURIComponent(key));
-    }
+    };
     return (
         <div className="page-content">
             <PlayersHeader onSearchChange={onSearchPlayers} />
