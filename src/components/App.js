@@ -9,8 +9,8 @@ import VisibleTodoList from './VisibleTodoList'
 export default function App() {
   return (
     <Router>
-      <nav class="top-nav" role="menubar">
-          <ul class="menu">
+      <nav className="top-nav" role="menubar">
+          <ul className="menu">
               <li>
                   <Link to="/" className="menu-item" activeClassName="active">Players</Link>
               </li>
