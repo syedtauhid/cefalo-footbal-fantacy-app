@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ErrorBoundary from '../ErrorBoundary';
-import PlayersHeader from './PlayersHeader';
+import SectionHeader from '../SectionHeader';
 import PlayersList from './PlayersList';
 
 const Players = () => {
@@ -10,7 +10,7 @@ const Players = () => {
     };
     return (
         <div className="page-content">
-            <PlayersHeader onSearchChange={onSearchPlayers} />
+            <SectionHeader heading="Players" onSearchChange={onSearchPlayers} />
             <ErrorBoundary>
                 <PlayersList search={searchKey}/>
             </ErrorBoundary>

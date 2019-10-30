@@ -10,19 +10,19 @@ const Link = ({ active, children, onClick }) => {
     <a
       href=""
       onClick={e => {
-        e.preventDefault()
+        e.preventDefault();
         onClick()
       }}
     >
       {children}
     </a>
   )
-}
+};
 
 Link.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired
-}
+};
 
-export default Link
+export default Link;
