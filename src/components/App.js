@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Players from './Players/Players';
+import PlayerListView from './Players/PlayerListView';
 import HomeView from './Home/HomeView';
 // import Logo from '../../img/premier-league.png'
 
@@ -25,8 +25,8 @@ export default function App() {
       </nav>
       <main id="mainContent">
           <Route exact path="/" component={HomeView} />
-          <Route exact path="/players" component={Players} />
-          <Route exact path="/results" component={Players} />
+          <Route exact path="/players" component={PlayerListView} />
+          <Route exact path="/results" component={PlayerListView} />
       </main>
     </Router>
   )

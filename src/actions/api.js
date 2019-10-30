@@ -1,4 +1,4 @@
-import http, { newsApi } from './http';
+import http from './http';
 
 let api = {};
 
@@ -31,15 +31,19 @@ api.getSeasons = (type, query = {pageSize: 100, page:0}) => (dispatch) =>
 
 // Teams
 api.getTeams = (type, seasonId = 274) => (dispatch) =>
-    dispatch(respond(http.getThunk(type, `/compseasons/${seasonId}/teams`, query)));
+    dispatch(respond(http.getThunk(type, `/compseasons/${seasonId}/teams`)));
 
 //
-api.getResults = (type, query) => (dispatch) =>
+api.getResults = (type, query={}) => (dispatch) =>
     dispatch(respond(http.getThunk(type, `/fixtures`, query)));
 
 // News
-api.getNews = (type, query) => (dispatch) =>
-  dispatch(respond(newsApi.getThunk(type, `posts/`, query)));
+api.getNews = (type, pageSize = 12) => (dispatch) => {
+  fetch(`https://api.canary.platform.pulselive.com/production/stream/fb43114f-4af4-437e-966d-ca94851a29e0/posts/?pageSize=${pageSize}`)
+      .then(res => res.json())
+      .then(response => dispatch({type, response, statusCode:200})
+  )
+};
 
 
 export default api;

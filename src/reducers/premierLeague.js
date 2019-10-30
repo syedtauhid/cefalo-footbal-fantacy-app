@@ -20,6 +20,7 @@ export default function premierLeague(state = initialState, action) {
       return pathRequestState('players', state, action, 'content');
 
     case FETCH_NEWS:
+      console.log(action);
       return pathRequestState('news', state, action, 'content');
 
     case FETCH_RESULTS:
