@@ -1,10 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-import Players from './Players'
-import Footer from './Footer'
-import AddTodo from './AddTodo'
-import VisibleTodoList from './VisibleTodoList'
+import Players from './Players/Players';
+import HomeView from './Home/HomeView';
+// import Logo from '../../img/premier-league.png'
 
 export default function App() {
   return (
@@ -12,77 +10,24 @@ export default function App() {
       <nav className="top-nav" role="menubar">
           <ul className="menu">
               <li>
-                  <Link to="/" className="menu-item" activeClassName="active">Players</Link>
+                  <img src='/img/premier-league.png' alt='logo' style={{maxWidth:'170px'}}/>
               </li>
               <li>
-                <Link to="/about" exact={true} className="menu-item" activeClassName="active">About</Link>
+                  <Link to="/" className="menu-item" activeclassname="active">Home</Link>
               </li>
               <li>
-                <Link to="/topics" exact={true} className="menu-item" activeClassName="active">Topics</Link>
+                <Link to="/players" className="menu-item" activeclassname="active">Players</Link>
               </li>
               <li>
-                <Link to="/redux" exact={true} className="menu-item" activeClassName="active">Redux Example</Link>
+                <Link to="/results" className="menu-item" activeclassname="active">Results</Link>
               </li>
           </ul>
       </nav>
       <main id="mainContent">
-          <Route exact path="/" component={Players} />
-          <Route path="/about" component={About} />
-          <Route path="/topics" component={Topics} />
-          <Route path="/redux" component={TodoList} />
+          <Route exact path="/" component={HomeView} />
+          <Route exact path="/players" component={Players} />
+          <Route exact path="/results" component={Players} />
       </main>
     </Router>
-  )
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Topics({ match }) {
-  return (
-    <div>
-      <h2>Topics</h2>
-      <ul>
-        <li>
-          <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-        </li>
-      </ul>
-
-      <Route path={`${match.path}/:topicId`} component={Topic} />
-      <Route
-        exact
-        path={match.path}
-        render={() => <h3>Please select a topic.</h3>}
-      />
-    </div>
-  );
-}
-
-function Topic({ match }) {
-  return (
-    <div>
-      <h3>{match.params.topicId}</h3>
-    </div>
-  );
-}
-
-function TodoList() {
-  return (
-    <div>
-      <AddTodo />
-      <VisibleTodoList />
-      <Footer />
-    </div>
   )
 }

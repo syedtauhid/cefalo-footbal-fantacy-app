@@ -746,8 +746,8 @@ a {
   font-size: 1.2rem;
   transition: all .2s;
 }
-.drop-down .dropdown-list li.highlight, 
-.drop-down .dropdown-list li:focus, 
+.drop-down .dropdown-list li.highlight,
+.drop-down .dropdown-list li:focus,
 .drop-down .dropdown-list li:hover {
   background-color: transparent;
   font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif;
