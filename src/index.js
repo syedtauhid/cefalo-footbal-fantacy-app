@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import todoApp from './reducers'
+import reducers from './reducers'
+import "@fortawesome/fontawesome-free/css/all.css";
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
-const store = createStore(todoApp)
+const store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
-import visibilityFilter from './visibilityFilter'
+import premierLeague from './premierLeague'
 
 export default combineReducers({
-  todos,
-  visibilityFilter
+  premierLeague
 })
