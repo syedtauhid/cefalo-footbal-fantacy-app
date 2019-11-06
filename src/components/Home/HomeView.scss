@@ -1,1 +1,48 @@
+.stories {
+  .userInfo {
+    padding: .5rem 0 .6rem 6.6rem;
+    position: relative;
+    height: 4.4rem;
 
+    .userId {
+      font-size: 1.2rem;
+
+      a {
+        color: #FFF;
+        font-weight: 600;
+      }
+    }
+
+    .avatar {
+      width: 4.4rem;
+      height: 4.4rem;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: 4.4rem 4.4rem;
+      position: absolute;
+      top: 0;
+      left: .8rem;
+    }
+
+  }
+
+  .postImage {
+    display: block;
+    background-size: cover;
+    width: 100%;
+    height: 18.4rem;
+    border-radius: 3px 3px 0 0;
+  }
+
+  .blockquote-footer {
+    font-size: 14px;
+    a {
+      text-decoration: none;
+    }
+
+    .twitter-w {
+      max-width: 25px;
+    }
+
+  }
+}

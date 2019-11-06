@@ -13,13 +13,13 @@ export default function App() {
                   <img src='/img/premier-league.png' alt='logo' style={{maxWidth:'170px'}}/>
               </li>
               <li>
-                  <Link to="/" className="menu-item" activeclassname="active">Home</Link>
+                  <Link to="/" className="menu-item">Home</Link>
               </li>
               <li>
-                <Link to="/players" className="menu-item" activeclassname="active">Players</Link>
+                <Link to="/players" className="menu-item">Players</Link>
               </li>
               <li>
-                <Link to="/results" className="menu-item" activeclassname="active">Results</Link>
+                <Link to="/results" className="menu-item">Results</Link>
               </li>
           </ul>
       </nav>
