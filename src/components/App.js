@@ -18,15 +18,11 @@ export default function App() {
               <li>
                 <Link to="/players" className="menu-item">Players</Link>
               </li>
-              <li>
-                <Link to="/results" className="menu-item">Results</Link>
-              </li>
           </ul>
       </nav>
       <main id="mainContent">
           <Route exact path="/" component={HomeView} />
           <Route exact path="/players" component={PlayerListView} />
-          <Route exact path="/results" component={PlayerListView} />
       </main>
     </Router>
   )

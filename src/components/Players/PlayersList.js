@@ -29,7 +29,7 @@ const PlayersList = ({playersData, search}) => {
     return (
         <>
         <div className="wrapper">
-            <PlayersFilter onChangeFilter={onChangeFilter} />
+            {/* <PlayersFilter onChangeFilter={onChangeFilter} /> */}
             <div className="table">
                 <table className="table-borderless">
                     <thead>
