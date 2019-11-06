@@ -1,7 +1,8 @@
 import React from 'react';
 
 const SocialStory = ({story}) => {
-    const {twitter_entities, actor, body, link} = story;
+    const {twitter_entities, actor, body, link, postedTime} = story;
+    const calculateHoursDiffFromNow = (postedDate) => Math.floor(Math.abs(new Date() - postedDate) / 36e5);
     return (
         <div className='col-md-4 mb-5'>
             <div className="card">
@@ -10,7 +11,8 @@ const SocialStory = ({story}) => {
                         {actor.image && <div className="avatar" style={{backgroundImage: `url( ${actor.image} )`}}/> }
                         { actor.displayName && <p className="userName">{actor.displayName}</p>}
                         <p className="userId">
-                            <span>@{actor.preferredUsername}</span> • <a href={actor.link} role="button" target="_blank" className="time">20h ago</a>
+                            <span>@{actor.preferredUsername}</span> • <a href={actor.link} role="button" target="_blank" className="time">
+                            {calculateHoursDiffFromNow(new Date(postedTime))}h ago</a>
                         </p>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ const PlayerRow = ({data}) => {
         <tr>
             <td>
                 <a className="player-name" href="#">
-                    <img className="img" src={playerImgUrl(altIds.opta)} alt={name.display} />{name.display}
+                    <img className="img" src={playerImgUrl(altIds.opta)} alt='no-image' />{name.display}
                 </a>
             </td>
             <td className="hide-s">{info.positionInfo}</td>
